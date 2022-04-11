@@ -115,6 +115,9 @@ class productIpsum:
         self.name = _name
         self.price = _price
         self.tax = _tax
+
+    def get_name(self):
+        return self.name
 # exo 12.8
 # Créez 3 instances de la classe `ProductIpsum` et affectez les valeurs suivantes à ses attributs en utilisant le constructeur :
 # - product1

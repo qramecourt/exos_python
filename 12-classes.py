@@ -13,7 +13,7 @@ class Foo:
         return self.bar
     def ger_baz(self):
         return self.baz
-    def set_bae
+    
 
 # import de classes depuis d'autres fichiers
 # normalement, les imports se font au tout début des scripts
