@@ -111,13 +111,23 @@ product3 = productLorem('Baz', 16.18)
 # - get_tax_included_price() : cette méthode calcule le prix taxe incluse et le renvoit ; par exemple pour un produit de 100 € et une taxe de 20 %, le résultat est 120.0
 # réponse 12.7
 class productIpsum:
-    def __init__(self , _name: str = '', _price: float = 0.0, _tax: float = 0.0):
-        self.name = _name
-        self.price = _price
-        self.tax = _tax
+        
+   _name :str = ''
+   price : float = 0.0
+   tax: float = 0.0
 
-    def get_name(self):
-        return self.name
+def get_name(self):
+    return self.name
+def set_name(self, name):
+    self.name = name
+def get_price(self):
+    return self.price
+def set_price(self, price):
+    self.price = price
+def get_tax(self):
+    return self.tax
+def set_tax(self, tax):
+    self.tax = tax 
 # exo 12.8
 # Créez 3 instances de la classe `ProductIpsum` et affectez les valeurs suivantes à ses attributs en utilisant le constructeur :
 # - product1
