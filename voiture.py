@@ -1,6 +1,6 @@
 
 class Voiture: 
-    def __init__(self,modele: str, marque: str, carburant: str, type: str, vitesse: int, acceleration: float):
+    def __init__(self,modele: str, marque: str, carburant: str, type: str, vitesse: int, acceleration: float): #ceci est le constructeur python
         self._marque = marque
         self._modele = modele
         self._carburant = carburant
@@ -22,7 +22,8 @@ def get_type(self) -> str:
 
     return self._type
 
-def get_type(self) -> 
+def get_acceleration(self)-> int:
+    return self._acceleration
 
 #setter
 def set_vitesse(self, vitesse : int):
@@ -31,3 +32,14 @@ def set_vitesse(self, vitesse : int):
     elif vitesse > 500: 
         raise Exception("c est trop rapide!!!")
     self.vitesse = vitesse
+
+
+    def accelerate(self):
+        vitesse = self.get_vitesse()
+        vitesse+=10
+        self.set_vitesse(vitesse)
+    
+    def ralentir(self):
+        vitesse = self.get_vitesse()
+        vitesse -=20
+        self.set_vitesse(vitesse)

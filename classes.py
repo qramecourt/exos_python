@@ -1,7 +1,7 @@
 from voiture import Voiture
 
 
-v1 = Voiture("regera", "koenigsegg", "essence", "hypercar", 450, 1.8 )
+v1 = Voiture("regera", "koenigsegg", "essence", "hypercar", 450, 1.8 )#objet
 print(v1._marque,v1._modele, v1._carburant, v1._type, v1._vitesse, v1._acceleration)
 print(v1._vitesse)
 v1.vitesse = 451
