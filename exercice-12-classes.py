@@ -128,6 +128,7 @@ def get_tax(self):
     return self.tax
 def set_tax(self, tax):
     self.tax = tax 
+    
 # exo 12.8
 # Créez 3 instances de la classe `ProductIpsum` et affectez les valeurs suivantes à ses attributs en utilisant le constructeur :
 # - product1
@@ -144,7 +145,9 @@ def set_tax(self, tax):
 #   - tax: 5.5
 
 # réponse 12.8
-productIpsum('Dolor', 31.41)
+product1 = productIpsum('Dolor', 31.41, 20.0)
+product2 = productIpsum('Sit', 27.18, 10.0)
+product3 = productIpsum('Amet', 16.18, 5.5)
 # exo 12.9
 # Ajoutez chacune des instances de la classe `ProductIpsum` à une liste nommée `products`
 # Utilisez une boucle `for` (type `foreach`) pour afficher le nom, le prix (sans la taxe), la taxe et le prix taxe incluse de chaque produit
