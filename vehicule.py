@@ -7,7 +7,7 @@ class Vehicule:
             self._type = type
             self._acceleration = acceleration#si il y a un underscore _, elles sont vues comme privées. il n'y a pas de définiton public ou privées en Python, ceci est une convention
             self.set_vitesse(vitesse)
-        
+    _speedup = 10 #toute varaibla déclarée en classe-mère est nommée varaible de classe
     
     def __str__(self):
         return f"{self._marque} {self._modele} {self._carburant} {self._vitesse}"
@@ -35,10 +35,10 @@ class Vehicule:
 
     def accelerate(self):
         vitesse = self.get_vitesse()
-        vitesse+=10
+        vitesse+= self._speedup
         self.set_vitesse(vitesse)
         
     def ralentir(self):
         vitesse = self.get_vitesse()
-        vitesse -=20
+        vitesse -= self._speedup
         self.set_vitesse(vitesse)

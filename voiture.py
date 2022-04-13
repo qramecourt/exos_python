@@ -1,6 +1,7 @@
 from vehicule import Vehicule
 
 class Voiture(Vehicule): 
+    _speedup  = 20
     def __init__(self,modele: str, marque: str, carburant: str, type: str, vitesse: int, acceleration: float): #ceci est le constructeur python
         super().__init__(modele, marque, carburant, type, vitesse, acceleration)
         self._type = type
