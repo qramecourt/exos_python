@@ -7,6 +7,7 @@ class Voiture(Vehicule):
         self._type = type
         self._acceleration = acceleration#si il y a un underscore _, elles sont vues comme privées. il n'y a pas de définiton public ou privées en Python, ceci est une conventino
         self.set_vitesse(vitesse)
+        
     def __str__(self):
         return super().__str__() + f"{self.type}"
 

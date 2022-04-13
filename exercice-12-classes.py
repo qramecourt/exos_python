@@ -11,6 +11,7 @@
 # Pas la peine de créer de getters et de setters
 
 # réponse 12.1
+
 from unicodedata import name
 
 
@@ -55,6 +56,7 @@ user4 = User('Avrel', 'Dalton', 'avrel.dalton@examle.com', True)
 
 # réponse 12.3
 
+
 # exo 12.4
 # Créez une classe nommée `ProductLorem` qui possède les attributs suivants :
 # - _name: valeur par défaut ''
@@ -67,10 +69,25 @@ user4 = User('Avrel', 'Dalton', 'avrel.dalton@examle.com', True)
 # - set_price() : détermine le prix du produit
 
 # réponse 12.4
-class productLorem:
-    def __init__(self, _name : str = '', _price : float = 0.01):
-        self._name = _name
-        self._price =_price
+
+
+class ProductLorem:
+    def __init__(self,_name: str = "",_price: float = 0.0):
+        self.name = _name
+        self.price = _price
+
+
+    def get_name(self):# pour les getters, on doit pas mettre le paramètre
+        return self.name
+
+    def set_name(self, name):
+        self.name = name
+
+    def get_price(self):
+        return self.price
+    
+    def set_price(self,price):
+        self.price = price
 # exo 12.5
 # Créez 3 instances de la classe `ProductLorem` et affectez les valeurs suivantes à ses attributs en utilisant les setters :
 # - product1
@@ -84,15 +101,23 @@ class productLorem:
 #   - price: 16,18
 
 # réponse 12.5
-product1 = productLorem('Foo', 31.41)
-product2= productLorem('Bar', 27.18)
-product3 = productLorem('Baz', 16.18)
+product_lorems = [
+    ProductLorem('Foo', 31.41),
+    ProductLorem('Bar', 27.18), 
+    ProductLorem('Baz', 16.18)
+]
 # exo 12.6
 # Ajoutez chacune des instances de la classe `ProductLorem` à une liste nommée `products`
 # Utilisez une boucle `for` (type `foreach`) pour afficher le nom et le prix de chaque produit
 # Calculez la somme du prix des produits et affichez-en un arrondi à 2 chiffres après la virgule, après la boucle `for`
 
 # réponse 12.6
+sum_product = 0
+
+for product_lorem in product_lorems:# on peut pas parcourir un objet avec un boucle for
+    sum_product += product_lorem.get_price()
+    # print(product_lorem.get_price())
+print(round(sum_product, 2))
 
 # exo 12.7
 # Créez une classe nommée `ProductIpsum` qui possède les attributs suivants :
@@ -111,23 +136,24 @@ product3 = productLorem('Baz', 16.18)
 # - get_tax_included_price() : cette méthode calcule le prix taxe incluse et le renvoit ; par exemple pour un produit de 100 € et une taxe de 20 %, le résultat est 120.0
 # réponse 12.7
 class productIpsum:
-        
-   _name :str = ''
-   price : float = 0.0
-   tax: float = 0.0
+    def __init__(self, _name :str = '', price : float = 0.0,tax: float = 0.0 ):
+        def get_name(self):
+            return self.name
 
-def get_name(self):
-    return self.name
-def set_name(self, name):
-    self.name = name
-def get_price(self):
-    return self.price
-def set_price(self, price):
-    self.price = price
-def get_tax(self):
-    return self.tax
-def set_tax(self, tax):
-    self.tax = tax 
+        def set_name(self, name):
+            self.name = name
+
+        def get_price(self):
+            return self.price
+
+        def set_price(self, price):
+            self.price = price
+
+        def get_tax(self):
+            return self.tax
+
+        def set_tax(self, tax):
+            self.tax = tax 
     
 # exo 12.8
 # Créez 3 instances de la classe `ProductIpsum` et affectez les valeurs suivantes à ses attributs en utilisant le constructeur :
@@ -145,9 +171,12 @@ def set_tax(self, tax):
 #   - tax: 5.5
 
 # réponse 12.8
-product1 = productIpsum('Dolor', 31.41, 20.0)
-product2 = productIpsum('Sit', 27.18, 10.0)
-product3 = productIpsum('Amet', 16.18, 5.5)
+product_ipsums = [
+    productIpsum('Dolor', 31.41, 20.0),
+    productIpsum('Sit', 27.18, 10.0),
+    productIpsum('Amet', 16.18, 5.5)
+]
+
 # exo 12.9
 # Ajoutez chacune des instances de la classe `ProductIpsum` à une liste nommée `products`
 # Utilisez une boucle `for` (type `foreach`) pour afficher le nom, le prix (sans la taxe), la taxe et le prix taxe incluse de chaque produit
@@ -158,4 +187,7 @@ product3 = productIpsum('Amet', 16.18, 5.5)
 # Et affichez-en des arrondis à 2 chiffres après la virgule, après la boucle `for`
 
 # réponse 12.9
+for product_ipsum in product_ipsums:
+    pass
 
+    
