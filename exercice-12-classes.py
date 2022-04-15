@@ -45,10 +45,12 @@ class User:
 #   - newsletter: true
 
 # réponse 12.2
-user1 = User('Joe', 'Dalton', 'joe.dalton@example.com', True)
-user2 = User('William', 'Dalton', 'jack.dalton@example.com', False)
-user3 = User('Jack', 'Dalton', 'jack.dalton@example.com', False)
-user4 = User('Avrel', 'Dalton', 'avrel.dalton@examle.com', True)
+users = [
+ User('Joe', 'Dalton', 'joe.dalton@example.com', True),
+ User('William', 'Dalton', 'jack.dalton@example.com', False),
+ User('Jack', 'Dalton', 'jack.dalton@example.com', False),
+ User('Avrel', 'Dalton', 'avrel.dalton@examle.com', True)
+]
 
 # exo 12.3
 # Ajoutez chacune des instances de la classe `User` à une liste nommée `users`
@@ -188,6 +190,6 @@ product_ipsums = [
 
 # réponse 12.9
 for product_ipsum in product_ipsums:
-    pass
-
+    product_ipsums.append(productIpsum)
+    print(product_ipsums)
     

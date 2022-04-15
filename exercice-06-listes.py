@@ -29,7 +29,7 @@ print(my_list)
 my_list = ['foo', 'bar', 'baz', 'lorem', 'ipsum']
 
 # réponse 6.4
-
+del(my_list[1])
 # exo 6.5
 # Remplacez l'élément qui se trouve en deuxièm position de la liste par un nombre entier et affichez le résultat
 my_list = ['foo', 'bar', 'baz', 'lorem', 'ipsum']
@@ -42,13 +42,15 @@ print(my_list)
 my_list = ['foo', 'bar', 'baz', 'lorem', 'ipsum']
 
 # réponse 6.6
-
+print(len(my_list))
 # exo 6.7
 # Inversez la position des valeurs `bar` et `lorem` puis affichez le résultat
 my_list = ['foo', 'bar', 'baz', 'lorem', 'ipsum']
 
 # réponse 6.7
-
+my_list[1] = 'lorem'
+my_list[3] = 'bar'
+print(my_list)
 # Remarque 6.2
 # les exercices suivants nécessitent l'utilisation d'une boucle `for`
 
@@ -57,7 +59,7 @@ my_list = ['foo', 'bar', 'baz', 'lorem', 'ipsum']
 my_list = [2.71, 42]
 
 # réponse 6.8
-result = sum(my_list)
+
 # exo 6.9
 # Calculez la somme des nombres de la liste et affichez le résultat
 my_list = [2.71, 42, 123, 2, 3.14, 1.61]
@@ -88,7 +90,8 @@ my_list = [2.71, 42, 123, 2, 3.14, 1.61]
 my_list = [2.71, 42, 123, 2, 3.14, 1.61]
 
 # réponse 6.13
-
+for i in my_list:
+    pass
 # exo 6.14
 # Créez une deuxième liste ne contenant que les nombre entiers de la liste
 my_list = [2.71, 42, 123, 2, 3.14, 1.61]
@@ -113,8 +116,20 @@ my_list = [2.71, 42, 123, 2, 3.14, 1.61]
 my_list = [2.71, 42, 123, 2, 3.14, 1.61]
 
 # réponse 6.16
+def tri_algo_bulles(my_list):
+    i = len(my_list)
+    for number in range(i):
+        for n in range(0, i-number-1):
+            if my_list[n] > my_list[n + 1]:
+                my_list[n], my_list[n + 1] = my_list[n + 1], 
+    tri_algo_bulles(my_list)
 
+    print("tableau trié: ")
+    for number in range(len(my_list)):
+        print("%d" %my_list[number])
+    
 # code 6.1
+
 # Lire la valeur de la ligne `m` et de la colonne `n` d'un tableau en 2 dimensions
 # print(matrix[m][n])
 #
@@ -140,7 +155,7 @@ for _ in range(0, size):
 print(matrix)
 
 # réponse 6.17
-
+print(matrix[2][3])
 # code 6.2
 # Pour afficher toutes les combinaisons possibles de deux nombres de 0 à n inclus vous pouvez utiliser deux boucles `for` imbriquées
 #
