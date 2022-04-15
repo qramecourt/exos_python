@@ -139,3 +139,7 @@ price_per_kilo_2 = (1000 / weight_2) * (price_2/weight_2)
 print(str(price_per_kilo_1))
 print(str(price_per_kilo_2))
 
+if price_per_kilo_1 > price_per_kilo_2:
+    print('charly a raison')
+else:
+    print('charly a tort')
