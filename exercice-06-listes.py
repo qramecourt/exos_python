@@ -110,7 +110,10 @@ my_list = [2.71, 42, 123, 2, 3.14, 1.61]
 my_list = [2.71, 42, 123, 2, 3.14, 1.61]
 
 # réponse 6.15
+for i in range(len(my_list)):
+    my_list[i], my_list[i + 1] = my_list[i + 1], my_list[i]
 
+print(my_list)
 # exo 6.16
 # Triez la liste en utilisant l'algorithme du tri bulle puis affichez la liste
 my_list = [2.71, 42, 123, 2, 3.14, 1.61]
@@ -121,7 +124,7 @@ def tri_algo_bulles(my_list):
     for number in range(i):
         for n in range(0, i-number-1):
             if my_list[n] > my_list[n + 1]:
-                my_list[n], my_list[n + 1] = my_list[n + 1], 
+                my_list[n], my_list[n + 1] = my_list[n + 1], my_list[n]
     tri_algo_bulles(my_list)
 
     print("tableau trié: ")
