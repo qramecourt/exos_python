@@ -16,7 +16,7 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."""
 
 # réponse 5.2
-print(my_text["minim"])
+print(my_text.find("minim"))
 # exo 5.3
 # Affectez les caractères de l'index 12 à 20 inclus, de la variable `my_text`, à une autre variable
 # Affichez le résultat ; le résultat devrait être `dolor sit`
@@ -26,7 +26,7 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."""
 
 # réponse 5.3
-my_text_sort = my_text[12, 20]
+#my_text_sort = my_text[12, 20]
 # code 5.1
 # La méthode `str.split()` permet de scinder une chaîne de caractères en tableau de chaînes de caractères en utilisant un séparateur
 # Example : ici on scinde une chaîne de caractères en utilisant l'espace ' ' comme séparateur
@@ -41,7 +41,9 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."""
 
 # réponse 5.4
-
+split_text = my_text.split(' ')
+print(split_text)
+print(split_text[5])
 # code 5.2
 # En python, un saut de ligne dans une chaîne de caractères peut être obtenu en utilisant un caractère échappé
 my_text1 = "texte\nmulti\nligne"

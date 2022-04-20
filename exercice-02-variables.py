@@ -11,7 +11,7 @@
 
 # réponse 2.1
 number = 42
-float = 1.61
+my_float = 1.61
 my_name = "quentin Ramecourt"
 is_morning = True
 my_level = None

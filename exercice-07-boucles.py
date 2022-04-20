@@ -103,17 +103,23 @@ for games in range(100):
 # en utilisant une boucle for, affichez tous les nombre pairs, de 1 à 99 inclus
 
 # réponse 7.13
-
+for r in range (1, 100):
+    if r %  2 ==0:
+        print(i)
 # exo 7.14
 # en utilisant une boucle for, affichez tous les nombre pairs, de 1 à 100 inclus
 
 # réponse 7.14
-
+for i in range(101):
+    if i % 2 == 0:
+        print(i)
 # exo 7.15
 # en utilisant une boucle for, affichez tous les nombres divisibles par 3, de 2 à 99 inclus
 
 # réponse 7.15
-
+for i in range (2, 100):
+    if i % 3 == 0:
+        print(i)
 # code 7.2
 # pour calculer la puissance 2 d'un nombre, on peut le multiplier par lui-même
 number = random.randint(3, 10)
@@ -136,9 +142,14 @@ print(number ** 3)
 # en utilisant une boucle for, affichez la puissance 3 des nombres de 1 à 100 inclus
 
 # réponse 7.17
-
+for i in range(100):
+    print(i ** 3)
 # exo 7.18
 # dans une boucle while, on tire un nombre entier `r` au hasard entre 1 et 100 inclus
 # boucler jusqu'à ce que la valeur 100 soit tirée au hasard
 
 # réponse 7.18
+i = random.randint(0, 101)
+while i < 100:
+    print(i)
+    break

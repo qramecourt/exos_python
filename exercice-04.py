@@ -102,7 +102,7 @@ else:
     print('le chiffre tiré est supérieur à 67')
 # exo 4.7
 # écrivez un bloc if qui affiche
-# - "le nombre a est supérieur au nombre b" si la variable a contient une valeur plus grande que celle de la variable b
+# - "le nombre a est sup    érieur au nombre b" si la variable a contient une valeur plus grande que celle de la variable b
 # - "le nombre a est inférieur au nombre b" si la variable a contient une valeur plus petite que celle de la variable b
 # - "les deux nombres a et b sont égaux" si les deux variables a et b contiennent la même valeur
 
@@ -144,5 +144,7 @@ print(mails)
 if mails == 0:
     print('il n\'y a pas de mails aujourd\'hui')
 elif mails ==1:
-    print('il y a ' + mails + ' mails aujourd\'hui')
+    print('il y a 1 mail aujourd\'hui')
+else: 
+    print(' il y a ' + mails + ' mails')
 

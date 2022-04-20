@@ -39,7 +39,7 @@ print('il reste ' + str(candies_rest) + ' bonbons et ' + str(chocolates_rest) + 
 chocolates_per_person = chocolates / friends
 candies_per_person = candies / friends
 
-print('bob pourra donner ' + str(candies_per_person) + ' bonbnos  et' + str(chocolates_per_person) + ' chocos par personne' )
+print('bob pourra donner ' + str(candies_per_person) + ' bonbons  et' + str(chocolates_per_person) + ' chocos par personne' )
 # exo 3.4
 # Calculez la moyenne des nombres suivants : 1, 1, 2, 3, 5, 8, 13.
 # Affectez le résultat à une variable et affichez le résultat.
