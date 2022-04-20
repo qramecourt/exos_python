@@ -59,7 +59,8 @@ print(my_list)
 my_list = [2.71, 42]
 
 # réponse 6.8
-
+result = sum(my_list)
+print(result)
 # exo 6.9
 # Calculez la somme des nombres de la liste et affichez le résultat
 my_list = [2.71, 42, 123, 2, 3.14, 1.61]
@@ -110,10 +111,7 @@ my_list = [2.71, 42, 123, 2, 3.14, 1.61]
 my_list = [2.71, 42, 123, 2, 3.14, 1.61]
 
 # réponse 6.15
-for i in range(len(my_list)):
-    my_list[i], my_list[i + 1] = my_list[i + 1], my_list[i]
 
-print(my_list)
 # exo 6.16
 # Triez la liste en utilisant l'algorithme du tri bulle puis affichez la liste
 my_list = [2.71, 42, 123, 2, 3.14, 1.61]

@@ -36,8 +36,8 @@ for games in range (100):
 for games in range (50):
     games +=1
     r =number
-    if r >=5:
-        print(r)
+    if r <=5:
+        print(' le résultat est plus petit que 5: ' + str(r))
 # exo 7.5
 # en utilisant une boucle for, on tire 20 fois un nombre entier `r` au hasard entre 1 et 10 inclus
 # affichez `r` s'il est plus grand ou égal à 6
@@ -63,7 +63,9 @@ for games in range(100):
 # affichez `r` s'il est compris entre 3 et 8 inclus
 
 # réponse 7.7
-
+for r in range (10):
+    if 3 <number <=8:
+        print(r)
 # exo 7.8
 # en utilisant une boucle for, on tire 50 fois un nombre entier `r` au hasard entre 1 et 10 inclus
 # utilisez une variable compteur `count` pour compter le nombre de fois où `r` est égal à 7

@@ -99,7 +99,8 @@ my_dict = {
 }
 
 # réponse 9.8
-
+for i in my_dict:
+    print(i)
 # exo 9.9
 # En utilisant une boucle `for` et sans utiliser la méthode `items()`, affichez les clés et les valeurs qui se trouvent dans le dictionnaire
 my_dict = {
@@ -132,3 +133,5 @@ my_dict = {
 # etc...
 
 # réponse 9.10
+for i in my_dict:
+    print(my_dict.items())
