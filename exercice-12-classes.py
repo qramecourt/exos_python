@@ -11,16 +11,16 @@
 # Pas la peine de créer de getters et de setters
 
 # réponse 12.1
-
-from unicodedata import name
-
-
+from xmlrpc.client import boolean
 class User:
-    def __init__(self, firstname : str='', lastname : str = '', email: str = '', newsletter: bool=False):
-        self.firstname = firstname
-        self.lastname = lastname
-        self.email = email
+    def __init__(self, firstname : str='', lastname: str = '', email: str='', newsletter : boolean = False):
+        self.firstname = firstname,
+        self.lastname = lastname,
+        self.email = email,
         self.newsletter = newsletter
+    def __str__(self):
+        return f'{self.firstname=}, {self.lastname=}, {self.email=}, {self.newsletter=}'.replace('self.', '')
+
 # exo 12.2
 # Créez 4 instances de la classe `User` et affectez les valeurs suivantes à ses attributs :
 # - user1
@@ -38,18 +38,18 @@ class User:
 #   - lastname: Dalton
 #   - email: jack.dalton@example.com
 #   - newsletter: false
-# - user3
-#   - firstname: Avrel
+# - user4
+#   - firstname: Averell
 #   - lastname: Dalton
-#   - email: avrel.dalton@example.com
+#   - email: averell.dalton@example.com
 #   - newsletter: true
 
 # réponse 12.2
-users = [
- User('Joe', 'Dalton', 'joe.dalton@example.com', True),
- User('William', 'Dalton', 'jack.dalton@example.com', False),
- User('Jack', 'Dalton', 'jack.dalton@example.com', False),
- User('Avrel', 'Dalton', 'avrel.dalton@examle.com', True)
+new_users = [
+    User('Joe', 'Dalton', 'joe.dalton@example.com', True),
+    User('William', 'Dalton', 'william.dalton@example.com'),
+    User('Jack', 'Dalton', 'jack.dalton@example.com'),
+    User('Averell', 'Dalton', 'averell.dalton@example.com', True)
 ]
 
 # exo 12.3
@@ -58,6 +58,11 @@ users = [
 
 # réponse 12.3
 
+users = []
+for i in range (len(new_users)):
+    users.append(new_users)
+
+print(users)
 
 # exo 12.4
 # Créez une classe nommée `ProductLorem` qui possède les attributs suivants :
@@ -73,23 +78,7 @@ users = [
 # réponse 12.4
 
 
-class ProductLorem:
-    def __init__(self,_name: str = "",_price: float = 0.0):
-        self.name = _name
-        self.price = _price
 
-
-    def get_name(self):# pour les getters, on doit pas mettre le paramètre
-        return self.name
-
-    def set_name(self, name):
-        self.name = name
-
-    def get_price(self):
-        return self.price
-    
-    def set_price(self,price):
-        self.price = price
 # exo 12.5
 # Créez 3 instances de la classe `ProductLorem` et affectez les valeurs suivantes à ses attributs en utilisant les setters :
 # - product1
@@ -103,23 +92,15 @@ class ProductLorem:
 #   - price: 16,18
 
 # réponse 12.5
-product_lorems = [
-    ProductLorem('Foo', 31.41),
-    ProductLorem('Bar', 27.18), 
-    ProductLorem('Baz', 16.18)
-]
+
 # exo 12.6
 # Ajoutez chacune des instances de la classe `ProductLorem` à une liste nommée `products`
 # Utilisez une boucle `for` (type `foreach`) pour afficher le nom et le prix de chaque produit
 # Calculez la somme du prix des produits et affichez-en un arrondi à 2 chiffres après la virgule, après la boucle `for`
 
 # réponse 12.6
-sum_product = 0
 
-for product_lorem in product_lorems:# on peut pas parcourir un objet avec un boucle for
-    sum_product += product_lorem.get_price()
-    # print(product_lorem.get_price())
-print(round(sum_product, 2))
+
 
 # exo 12.7
 # Créez une classe nommée `ProductIpsum` qui possède les attributs suivants :
@@ -137,25 +118,7 @@ print(round(sum_product, 2))
 # - get_tax_fee() : cette méthode calcule le montant de la taxe et le renvoit ; par exmeple pour un produit de 100 € et une taxe de 20 %, le résultat est 20.0
 # - get_tax_included_price() : cette méthode calcule le prix taxe incluse et le renvoit ; par exemple pour un produit de 100 € et une taxe de 20 %, le résultat est 120.0
 # réponse 12.7
-class productIpsum:
-    def __init__(self, _name :str = '', price : float = 0.0,tax: float = 0.0 ):
-        def get_name(self):
-            return self.name
 
-        def set_name(self, name):
-            self.name = name
-
-        def get_price(self):
-            return self.price
-
-        def set_price(self, price):
-            self.price = price
-
-        def get_tax(self):
-            return self.tax
-
-        def set_tax(self, tax):
-            self.tax = tax 
     
 # exo 12.8
 # Créez 3 instances de la classe `ProductIpsum` et affectez les valeurs suivantes à ses attributs en utilisant le constructeur :
@@ -173,11 +136,7 @@ class productIpsum:
 #   - tax: 5.5
 
 # réponse 12.8
-product_ipsums = [
-    productIpsum('Dolor', 31.41, 20.0),
-    productIpsum('Sit', 27.18, 10.0),
-    productIpsum('Amet', 16.18, 5.5)
-]
+
 
 # exo 12.9
 # Ajoutez chacune des instances de la classe `ProductIpsum` à une liste nommée `products`
@@ -189,7 +148,5 @@ product_ipsums = [
 # Et affichez-en des arrondis à 2 chiffres après la virgule, après la boucle `for`
 
 # réponse 12.9
-for product_ipsum in product_ipsums:
-    product_ipsums.append(productIpsum)
-    print(product_ipsums)
+
     

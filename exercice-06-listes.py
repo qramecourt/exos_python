@@ -91,15 +91,19 @@ my_list = [2.71, 42, 123, 2, 3.14, 1.61]
 my_list = [2.71, 42, 123, 2, 3.14, 1.61]
 
 # réponse 6.13
-for i in my_list:
-    pass
+for i, value in enumerate(my_list):
+    my_list[i] = value * 100
+    print(my_list)
 # exo 6.14
 # Créez une deuxième liste ne contenant que les nombre entiers de la liste
 my_list = [2.71, 42, 123, 2, 3.14, 1.61]
 
 # réponse 6.14
-
-# exo 6.15
+my_list_integers = []
+for i in my_list:
+    if i % 1 == 0:
+        my_list_integers.extend(my_list)
+        # exo 6.15
 # Ici le but est d'intervertir les éléments de la liste deux à deux
 # Liste initiale :
 #
@@ -111,7 +115,9 @@ my_list = [2.71, 42, 123, 2, 3.14, 1.61]
 my_list = [2.71, 42, 123, 2, 3.14, 1.61]
 
 # réponse 6.15
-
+for i in range(0, len(my_list), 2):
+    my_list[i], my_list[i+1] = my_list[i+1], my_list[i]
+    print(my_list)
 # exo 6.16
 # Triez la liste en utilisant l'algorithme du tri bulle puis affichez la liste
 my_list = [2.71, 42, 123, 2, 3.14, 1.61]

@@ -72,13 +72,23 @@ for r in range (10):
 # affichez la variable `count`
 
 # réponse 7.8
-
-# exo 7.9
+for r in range (50):
+    count  = r
+    if r == 7:
+        count +=1
+        print(count)
+    # exo 7.9
 # en utilisant une boucle for, on tire 10 fois un nombre entier `r` au hasard entre 1 et 10 inclus
 # utilisez une variable compteur `count` pour compter le nombre de fois où `r` est plus petit ou égal à 4
 # affichez la variable `count`
 
 # réponse 7.9
+r  = random.randint(0, 10)
+for r in range(66):
+    
+    if r <= 4:
+        count = r + 1
+        print(count)
 
 # exo 7.10
 # en utilisant une boucle for, on tire 33 fois un nombre entier `r` au hasard entre 1 et 10 inclus
@@ -86,21 +96,31 @@ for r in range (10):
 # affichez la variable `count`
 
 # réponse 7.10
-
+r = random.randint(0, 11)
+for r in range(33):
+    if r <= 7 :
+        count = r + 1
+        print(count)
 # exo 7.11
 # en utilisant une boucle for, on tire 66 fois un nombre entier `r` au hasard entre 1 et 10 inclus
 # utilisez une variable compteur `count` pour compter le nombre de fois où `r` est plus petit ou égal à 2, ou plus grand ou égal à 9
 # affichez la variable `count`
 
 # réponse 7.11
-
+for r in range(66):
+    if r <=2 or r >=9:
+        count = r + 1
+        print(count)
 # exo 7.12
 # en utilisant une boucle for, on tire 100 fois un nombre entier `r` au hasard entre 1 et 10 inclus
 # utilisez une variable compteur `count` pour compter le nombre de fois où `r` est compris entre 2 et 9 inclus
 # affichez la variable `count`
 
 # réponse 7.12
-
+for r in range (0, 100):
+    count = r +1
+    if 2 < r < 9:
+        print(count)
 # exo 7.13
 # en utilisant une boucle for, affichez tous les nombre pairs, de 1 à 99 inclus
 

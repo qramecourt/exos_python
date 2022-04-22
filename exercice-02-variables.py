@@ -38,9 +38,9 @@ print(round(1 / 3, 4))
 # réponse 2.2
 int = 2
 
-float = 1.62
+my_float = 1.62
 convert_in_into_float = float(int)
-convert_float_into_integer = int(float)
-round_int = int(round(float, 0))
-round_float = round(float, 0)
-print(int, float, convert_float_into_integer, convert_in_into_float, round_float, round_float)
+convert_float_into_integer = int(my_float)
+round_int = int(round(my_float, 0))
+round_float = round(my_float, 0)
+print(int, my_float, convert_float_into_integer, convert_in_into_float, round_float, round_float)
