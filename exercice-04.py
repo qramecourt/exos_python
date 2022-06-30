@@ -75,14 +75,14 @@ if number >= 5:
 # - "le nombre n'est pas compris entre 0 et 49 inclus" si la variable number ne contient pas de valeur comprise entre 0 et 49
 
 # affectaction d'un nombre entier entre 0 et 99 à la variable number
+
+# réponse 4.5
 number = random.randint(0, 99)
 print(number)
 if number <= 50:
     print('le nombre est inférieur ou égal à 49 inclus')
 else:
     print('le nombre tiré n\'est pas compris entre 0 et 49 inclus')
-# réponse 4.5
-
 # exo 4.6
 # écrivez un bloc if qui affiche
 # - "le nombre est compris entre 0 et 33 inclus" si la variable number contient une valeur comprise entre 0 et 33
@@ -102,7 +102,7 @@ else:
     print('le chiffre tiré est supérieur à 67')
 # exo 4.7
 # écrivez un bloc if qui affiche
-# - "le nombre a est sup    érieur au nombre b" si la variable a contient une valeur plus grande que celle de la variable b
+# - "le nombre a est supérieur au nombre b" si la variable a contient une valeur plus grande que celle de la variable b
 # - "le nombre a est inférieur au nombre b" si la variable a contient une valeur plus petite que celle de la variable b
 # - "les deux nombres a et b sont égaux" si les deux variables a et b contiennent la même valeur
 
